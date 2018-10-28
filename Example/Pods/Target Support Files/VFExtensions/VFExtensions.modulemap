@@ -1,0 +1,6 @@
+framework module VFExtensions {
+  umbrella header "VFExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

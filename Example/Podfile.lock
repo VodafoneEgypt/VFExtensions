@@ -1,0 +1,16 @@
+PODS:
+  - VFExtensions (0.1.0)
+
+DEPENDENCIES:
+  - VFExtensions (from `../`)
+
+EXTERNAL SOURCES:
+  VFExtensions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  VFExtensions: 30060cfea4f255573bb8ede07d795063b94d8ca2
+
+PODFILE CHECKSUM: 2216790abcb81f59bc1ff9750cb4e903daf79f1c
+
+COCOAPODS: 1.5.3
