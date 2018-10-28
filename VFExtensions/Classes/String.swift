@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Languagehandlerpod
 
 extension String {
     

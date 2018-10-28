@@ -1,13 +1,13 @@
+platform :ios, '9.0'
 source 'https://github.com/VodafoneEgypt/Specs.git'
 
 use_frameworks!
 
 target 'VFExtensions_Example' do
-  pod 'VFExtensions', :path => '../'
+    pod 'VFExtensions', :path => '../'
 
   target 'VFExtensions_Tests' do
     inherit! :search_paths
 
-    
   end
 end

@@ -1,16 +1,23 @@
 PODS:
-  - VFExtensions (0.1.0)
+  - Languagehandlerpod (0.1.3)
+  - VFExtensions (0.1.1):
+    - Languagehandlerpod
 
 DEPENDENCIES:
   - VFExtensions (from `../`)
+
+SPEC REPOS:
+  https://github.com/VodafoneEgypt/Specs.git:
+    - Languagehandlerpod
 
 EXTERNAL SOURCES:
   VFExtensions:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VFExtensions: 30060cfea4f255573bb8ede07d795063b94d8ca2
+  Languagehandlerpod: 521f4098e83ebbbfbdf50202d6531a5668c46c08
+  VFExtensions: 5f253b45586b50dcd37f8db63311c83ee889c8f2
 
-PODFILE CHECKSUM: 2216790abcb81f59bc1ff9750cb4e903daf79f1c
+PODFILE CHECKSUM: 1056311e267c3da2c6f0865769e78fb0c9d3bc59
 
 COCOAPODS: 1.5.3
