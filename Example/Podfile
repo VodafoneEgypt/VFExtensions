@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VFExtensions_Example' do
+  pod 'VFExtensions', :path => '../'
+
+  target 'VFExtensions_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
