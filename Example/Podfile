@@ -1,3 +1,5 @@
+source 'https://github.com/VodafoneEgypt/Specs.git'
+
 use_frameworks!
 
 target 'VFExtensions_Example' do
