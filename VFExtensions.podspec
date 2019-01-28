@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VFExtensions'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'AVFExtensions is extensions pod.'
   s.description      = 'AVFExtensions is extensions pod which contains UIImage, UIView, Sring, Float, Double extensions'
 
