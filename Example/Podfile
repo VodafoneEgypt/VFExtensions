@@ -1,5 +1,5 @@
-platform :ios, '9.0'
 source 'https://gitlab.com/TahaElsheikh1/specs.git'
+source 'https://github.com/CocoaPods/Specs'
 
 use_frameworks!
 

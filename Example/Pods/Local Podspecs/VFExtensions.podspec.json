@@ -1,6 +1,6 @@
 {
   "name": "VFExtensions",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "summary": "AVFExtensions is extensions pod.",
   "description": "AVFExtensions is extensions pod which contains UIImage, UIView, Sring, Float, Double extensions",
   "homepage": "https://github.com/VodafoneEgypt/VFExtensions",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/VodafoneEgypt/VFExtensions.git",
-    "tag": "0.1.1"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "9.0"
