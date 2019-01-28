@@ -1,6 +1,6 @@
 //
-//  String.swift
-//  Challenge_App
+//  StringExtension.swift
+//  Ana Vodafone
 //
 //  Created by khaled saad on 9/25/17.
 //  Copyright © 2017 Asgatech. All rights reserved.
@@ -12,9 +12,9 @@ import Languagehandlerpod
 extension String {
     
     var isNumeric: Bool {
-        guard self.characters.count > 0 else { return false }
+        guard self.count > 0 else { return false }
         let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-        return Set(self.characters).isSubset(of: nums)
+        return Set(self).isSubset(of: nums)
     }
 
     subscript (i: Int) -> Character {
@@ -24,9 +24,6 @@ extension String {
     subscript (i: Int) -> String {
         return String(self[i] as Character)
     }
-    
-
-    
     
     func toDateTime() -> Date {
         //Create Date Formatter
@@ -43,9 +40,6 @@ extension String {
         return dateFromString
     }
     
-    
-    
-    
     func toDateOnly() -> Date {
         //Create Date Formatter
         let dateFormatter = DateFormatter()
@@ -60,11 +54,6 @@ extension String {
         return dateFromString
     }
     
-    
-    
-    
-    
-    
     func toDate() -> Date {
         //Create Date Formatter
         let dateFormatter = DateFormatter()
@@ -73,7 +62,6 @@ extension String {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         
         print(self)
-        
         
         //Parse into NSDate
         let dateFromString : Date = dateFormatter.date(from: self)!
@@ -90,7 +78,6 @@ extension String {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         
         print(self)
-        
         
         //Parse into NSDate
         let dateFromString : Date = dateFormatter.date(from: self)!
@@ -109,17 +96,12 @@ extension String {
         
         print(self)
         
-        
         //Parse into NSDate
         let dateFromString : Date = dateFormatter.date(from: self)!
         
         //Return Parsed Date
         return dateFromString
     }
-    
-    
-    
-    
     
     func toTime() -> Date {
         //Create Date Formatter
@@ -136,6 +118,7 @@ extension String {
     }
     
 }
+
 extension String {
     
     var isValidEmail: Bool {
@@ -150,15 +133,14 @@ extension String {
         if self.count != 8 {
             return false
         }
+        
         if self.first == "5" && self[1] == "0"  {
             return true
         }
         return false
-        
     }
     
     public var initials: String {
-        
         var finalString = String()
         var words = components(separatedBy: .whitespacesAndNewlines)
         
@@ -176,7 +158,6 @@ extension String {
 
     
     var intValue : Int {
-        
         let arr = ["٠","١","٢","٣","٤","٥","٦","٧","٨","٩"]
         
         var result = self
@@ -188,11 +169,12 @@ extension String {
         
         return Int(result)!
     }
+    
     var localized: String {
         return NSLocalizedString(self, comment: "")
     }
+    
     var englishPhoneNumber : String {
-        
         let arr = ["٠","١","٢","٣","٤","٥","٦","٧","٨","٩"]
         
         var result = self
@@ -203,8 +185,8 @@ extension String {
         
         return result
     }
+    
     func localize() -> String {
         return LanguageHandler.sharedInstance().string(forKey: self)
     }
-    
 }

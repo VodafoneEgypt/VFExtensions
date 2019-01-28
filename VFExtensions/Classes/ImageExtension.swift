@@ -1,6 +1,6 @@
 //
-//  Image.swift
-//  WhichFont
+//  ImageExtension.swift
+//  Ana Vodafone
 //
 //  Created by Daniele on 27/07/17.
 //  Copyright © 2017 nexor. All rights reserved.
@@ -20,8 +20,7 @@ extension CALayer {
 }
 
 extension CIImage {
-    func toImage() -> UIImage
-    {
+    func toImage() -> UIImage {
         let context:CIContext = CIContext.init(options: nil)
         let cgImage:CGImage = context.createCGImage(self, from: self.extent)!
         return cgImage.toImage()
@@ -29,12 +28,12 @@ extension CIImage {
 }
 
 extension CGImage {
-    func toImage(orientation: UIImageOrientation? = nil) -> UIImage
-    {
+    func toImage(orientation: UIImage.Orientation? = nil) -> UIImage {
         let image = UIImage(cgImage: self, scale: UIScreen.main.scale, orientation: .right)
         return image
     }
 }
+
 extension UIImage {
     func rotate(radians: CGFloat) -> UIImage {
         let rotatedSize = CGRect(origin: .zero, size: size).applying(CGAffineTransform(rotationAngle: CGFloat(radians))).integral.size

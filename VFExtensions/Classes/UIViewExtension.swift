@@ -1,5 +1,5 @@
 //
-//  UIView.swift
+//  UIViewExtension.swift
 //  Ana Vodafone
 //
 //  Created by Khaled saad on 5/23/18.
@@ -7,20 +7,17 @@
 //
 
 import Foundation
-
 import UIKit
 import MapKit
 
-
 extension UINavigationController {
+    
     func popToViewController(backIndex : Int , animated : Bool)  {
-        
         let index = self.viewControllers.count - backIndex - 1
         self.popToViewController(self.viewControllers[index], animated: animated)
-        
     }
+    
     func popToViewController(identifier : String , animated : Bool)  {
-        
         for controller in self.viewControllers {
             if identifier == controller.restorationIdentifier {
                 self.popToViewController(controller, animated: animated)
@@ -28,8 +25,8 @@ extension UINavigationController {
             }
         }
     }
+    
     func containsController(identifier : String) -> Bool {
-        
         for controller in self.viewControllers {
             if identifier == controller.restorationIdentifier {
                 return true
@@ -37,8 +34,8 @@ extension UINavigationController {
         }
         return false
     }
+    
     func controller(identifier : String) -> UIViewController? {
-        
         for controller in self.viewControllers {
             if identifier == controller.restorationIdentifier {
                 return controller
@@ -47,6 +44,7 @@ extension UINavigationController {
         return nil
     }
 }
+
 extension UIView {
     
     func setShadow(color : UIColor = .lightGray,opacity : Float  = 1,radius : CGFloat = 5) {
@@ -54,23 +52,25 @@ extension UIView {
         self.layer.shadowOpacity = opacity
         self.layer.shadowOffset = CGSize.zero
         self.layer.shadowRadius = radius
-//        self.layer.shouldRasterize = true
     }
+    
     func setRounded(isRounded : Bool)  {
         self.clipsToBounds = true
         self.layer.cornerRadius = isRounded ? self.frame.size.height/2 : 0
     }
+    
     func setCorner(cornerRadius : Bool)  {
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadius ? self.frame.size.height/12 : 0
     }
+    
     func setCornerByValue(cornerRadius : Bool , value : CGFloat)  {
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRadius ? self.frame.size.height/value : 0
     }
     
     func addBlurEffect() {
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.bounds
         blurEffectView.layer.cornerRadius = self.layer.cornerRadius
@@ -78,10 +78,11 @@ extension UIView {
         
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(blurEffectView)
-        self.sendSubview(toBack: blurEffectView)
+        self.sendSubviewToBack(blurEffectView)
     }
-
+    
 }
+
 extension UIRefreshControl {
     func programaticallyBeginRefreshing(in scrollView: UIScrollView) {
         beginRefreshing()

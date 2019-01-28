@@ -1,5 +1,5 @@
 //
-//  UIDevice.swift
+//  UIDeviceExtension.swift
 //  Ana Vodafone
 //
 //  Created by Mahmoud Tarek on 2/13/18.
@@ -9,12 +9,15 @@
 import UIKit
 
 extension UIDevice {
+    
     var iPhoneX: Bool {
         return UIScreen.main.nativeBounds.height == 2436
     }
+    
     var iPhone: Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
+    
     enum ScreenType: String {
         case iPhone4_4S = "iPhone 4 or iPhone 4S"
         case iPhones_5_5s_5c_SE = "iPhone 5, iPhone 5s, iPhone 5c or iPhone SE"
@@ -23,6 +26,7 @@ extension UIDevice {
         case iPhoneX = "iPhone X"
         case unknown
     }
+    
     var screenType: ScreenType {
         switch UIScreen.main.nativeBounds.height {
         case 960:
